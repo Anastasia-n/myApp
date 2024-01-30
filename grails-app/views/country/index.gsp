@@ -39,5 +39,11 @@
                 </tr>
             </g:each>
         </table>
+        <g:if test="${offset > 0}">
+            <g:link class="btn btn-outline-primary" style="margin-left: 15px; margin-bottom:20px;" controller="country" action="index" params="[offset:(offset - max < 0 ? 0 : offset - max)]">Назад</g:link>
+        </g:if>
+        <g:if test="${(offset+max) < countryCount}">
+            <g:link class="btn btn-outline-primary" style="margin-left: 15px; margin-bottom:20px;" controller="country" action="index" params="[offset:(offset + max)]">Далее</g:link>
+        </g:if>
     </body>
 </html>

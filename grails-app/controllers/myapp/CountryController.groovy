@@ -7,11 +7,14 @@ class CountryController {
     def countryService
 
     def index() {
-        respond countryService.list()
+        def max = 10
+        def offset = params.offset?.toInteger() ?: 0
+        def countryList = countryService.findAll(max,offset)
+        [countryList: countryList, countryCount: countryService.count(), offset:offset, max:max]
     }
 
     def create() {
-        respond new Country(params)
+        respond new Country()
     }
 
     def edit(Long id) {

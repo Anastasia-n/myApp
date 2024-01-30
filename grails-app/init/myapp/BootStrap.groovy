@@ -39,7 +39,7 @@ class BootStrap {
         new Hotel(name: "Infanta Mercedes Madrid", rating: 2, website: "https://www.hotelinfantamercedes.es/en/", country: spain).save()
         new Hotel(name: "Mandarin Oriental Ritz", rating: 5, website: "https://www.mandarinoriental.com/en/madrid/hotel-ritz", country: spain).save()
         new Hotel(name: "Amaranta", rating: 4, website: "https://www.amarantahotel.com/", country: thailand).save()
-    }
+   }
     def destroy = {
     }
 }

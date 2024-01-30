@@ -1,18 +1,35 @@
 package myapp
 
-import grails.gorm.services.Service
-import java.util.List
+import grails.gorm.transactions.Transactional
+import grails.validation.ValidationException
 
-@Service(Hotel)
-interface HotelService {
+@Transactional
+class HotelService {
 
-    Hotel get(Serializable id)
+//    def list() {
+//        Hotel.list()
+//    }
 
-    void delete(Serializable id)
+    def findAll(int max, int offset){
+        Hotel.list([max:max, offset:offset])
+    }
 
-    Hotel save(Hotel hotel)
+    def get(id){
+        Hotel.get(id)
+    }
 
-    List<Hotel> list()
+    def save(hotel){
+        if(!hotel.validate()){
+            throw new ValidationException("error on save operation", hotel.errors)
+        }
+        hotel.save()
+    }
 
+    def delete(id){
+        Hotel.get(id).delete()
+    }
+
+    def count(){
+        Hotel.count()
+    }
 }
-

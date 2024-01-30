@@ -8,12 +8,15 @@ class HotelController {
     def countryService
 
     def index() {
-        respond hotelService.list()
+        def max = 10
+        def offset = params.offset?.toInteger() ?: 0
+        def hotelList = hotelService.findAll(max,offset)
+        [hotelList: hotelList, hotelCount: hotelService.count(), offset:offset, max:max]
     }
 
     def create() {
         def countries = countryService.list()
-        def hotel = new Hotel(params)
+        def hotel = new Hotel()
         [hotel: hotel, countries: countries]
     }
 

@@ -13,6 +13,7 @@
     <body>
         <div class="nav" role="navigation">
             <ul>
+                <li><a href="/hotel/main">Поиск</a></li>
                 <li><a href="/hotel/index">Отели</a></li>
                 <li><a href="/country/index">Страны</a></li>
             </ul>
