@@ -29,7 +29,7 @@ JVM version: **11.0.21**
 Редактирование отеля:
 
 <img src="https://github.com/Anastasia-n/myApp/assets/52749662/6e943589-5632-4486-ae78-66ef0a952d71" width=33% height=33%>
-<img src="https://github.com/Anastasia-n/myApp/assets/52749662/28845b80-96a2-4b80-920a-6a99d4a78154" width=50% height=50%>
+<img src="https://github.com/Anastasia-n/myApp/assets/52749662/d9c7f1f5-5e8d-4109-a5aa-b594b3932e4a" width=30% height=30%>
 
 Справочник стран:
 
